@@ -4,6 +4,8 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 
 function App() {
 
+  const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
   const mapRef = React.useRef(null);
   const debounceRef = React.useRef(null);
 
@@ -123,7 +125,7 @@ function App() {
     try {
 
       const res = await fetch(
-        `/api/layers/${layer}/features?bbox=${minx},${miny},${maxx},${maxy}`
+        `${API_BASE}/api/layers/${layer}/features?bbox=${minx},${miny},${maxx},${maxy}`
       );
 
       if (!res.ok) {
