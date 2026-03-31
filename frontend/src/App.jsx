@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Map, Source, Layer} from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import githubIcon from './assets/github.png';
 
 function App() {
 
@@ -215,8 +216,19 @@ function App() {
     
     <div className='flex flex-col h-screen w-screen'>
 
-      <div className='navbar flex justify-center items-center bg-[#343434] text-white font-bold text-2xl'>
-            Enschede Mobility WebGIS
+      <div className='navbar flex justify-center items-center gap-5  bg-[#343434] text-white font-bold text-2xl'>
+            <div>
+                Enschede Mobility WebGIS
+            </div>
+
+            <a href='https://github.com/armaanFarooqui/mobility_webgis'>
+              <div>
+                <img 
+                  src={githubIcon}
+                  className='w-25' 
+                />
+              </div>
+            </a>
       </div>
 
       

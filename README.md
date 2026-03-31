@@ -2,7 +2,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://mobility-webgis.onrender.com) ![Stack](https://img.shields.io/badge/Stack-React%20%7C%20Node%20%7C%20PostGIS-blue)
 
-Interactive WebGIS for exploring mobility infrastructure in Enschede, Netherlands, built with a PostGIS spatial backend and MapLibre client.
+Interactive WebGIS for exploring mobility infrastructure in Enschede, Netherlands. Built with a PostGIS spatial backend and MapLibre client.
 
 ![Application screenshot](docs/screenshot.png)
 
