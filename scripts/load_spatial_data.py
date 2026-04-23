@@ -49,6 +49,11 @@ def psql_connect(
     logging.info(f'Connected to Postgres at {host}:{port}/{db}')
     return engine
 
+def init_postgis(engine):
+    with engine.begin() as conn:
+        conn.execute(text("CREATE EXTENSION IF NOT EXISTS postgis;"))
+    logging.info("PostGIS extension ensured")
+
 ### 4. Create Spatial Indices
 
 def post_sql_load(engine):
@@ -310,6 +315,8 @@ if __name__ == '__main__':
             PG_DB
         )
     
+        init_postgis(engine)
+
         download(CBS_LINK, CBS_PATH)
         
         boundary = process_cbs(CBS_PATH, engine)
